@@ -1,0 +1,101 @@
+<div class="wrapper">
+  <div class="container main">
+    <div class="row">
+      <div class="col-md-6 side-image">
+        <img src="{{path}}" alt="{{alttext}}">
+        <div class="text">
+          <p></p>
+        </div>
+      </div>
+
+      <div class="col-md-6 right">
+        <div class="input-box">
+          <label class="lbl">Welcome to <strong>FITNAT</strong></label>
+          <header class="headerr">Sign Up</header>
+          <form  [formGroup]="formSignUp" (ngSubmit)="handleSignup()" style="margin-top: -22px;">
+            <!-- First Name -->
+            <div class="input-field">
+              <input
+                formControlName="firstName"
+                type="text"
+                class="input"
+                id="firstName"
+                name="firstName"
+                required
+                autocomplete="off"
+              />
+              <label for="firstName">First Name</label>
+            </div>
+
+            <!-- Last Name -->
+            <div class="input-field">
+              <input
+                formControlName="lastName"
+                type="text"
+                class="input"
+                id="lastName"
+                name="lastName"
+                required
+                autocomplete="off"
+              />
+              <label for="lastName">Last Name</label>
+            </div>
+
+            <!-- Email -->
+            <div class="input-field">
+              <input
+                formControlName="email"
+                type="email"
+                class="input"
+                id="email"
+                name="email"
+                required
+                autocomplete="off"
+              />
+              <label for="email">Email</label>
+            </div>
+
+            <!-- Password -->
+            <div class="input-field">
+              <input
+                formControlName="password"
+                type="password"
+                class="input"
+                id="password"
+                name="password"
+                required
+              />
+              <label for="password">Password</label>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="input-field">
+              <input
+                formControlName="confirmPassword"
+                type="password"
+                class="input"
+                id="confirmPassword"
+                name="confirmPassword"
+                required
+              />
+              <label for="confirmPassword">Confirm Password</label>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="input-field">
+              <button type="submit" class="btn btn-primary signup">Sign Up</button>
+            </div>
+
+
+            <br />
+          </form>
+
+          <!-- Sign In Redirect -->
+          <div class="signin">
+            <span>Already have an account? <a routerLink="/signin">Sign in here</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

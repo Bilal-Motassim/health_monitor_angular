@@ -1,0 +1,68 @@
+<div class="wrapper">
+  <div class="container main">
+    <div class="row">
+      <div class="col-md-6 side-image">
+<img src="{{path}}" alt="{{alttext}}">
+        <div class="text">
+          <p></p>
+        </div>
+      </div>
+
+      <div class="col-md-6 right">
+
+        <div class="input-box ">
+          <label class="lbl">Welcome to <strong >FITNAT</strong></label>
+          <header class="headerr" >Sign In</header>
+          <form [formGroup]="formLogin" (ngSubmit)="handleLogin()" style="margin-top: -22px;">
+            <div class="input-field ">
+              <input formControlName="email"
+                type="email"
+                class="input "
+                id="email"
+                name="email"
+                required
+                autocomplete="off">
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field">
+              <input formControlName="password"
+                type="password"
+                class="input"
+                id="password"
+                name="password"
+                required>
+              <label for="password">Password</label>
+            </div>
+            <br>
+            <div class="input-field">
+              <button type="submit" class="btn btn-success">Sign In</button>
+            </div>
+            <br>
+
+              <button  class="btn btn-outline google ms-2 "><svg width="20" class="googlelogo" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#4285F4" d="M24 9.5c3.89 0 7.05 1.6 9.14 3.31l6.84-6.84C35.1 2.72 30.02 0 24 0 14.62 0 6.84 5.47 3.47 13.18l7.91 6.13C13.33 13.23 18.31 9.5 24 9.5z"/>
+                <path fill="#34A853" d="M46.69 24.47C46.69 23.1 46.56 21.84 46.33 20.63H24v8.22h12.76c-.56 2.89-2.23 5.37-4.75 7.02l7.37 5.71c4.29-3.96 6.76-9.8 6.76-16.11z"/>
+                <path fill="#FBBC05" d="M12.73 28.63c-.55-1.61-.87-3.32-.87-5.13s.32-3.52.87-5.13L4.82 13.18C3.16 16.17 2 19.9 2 24s1.16 7.83 2.82 10.82l7.91-6.19z"/>
+                <path fill="#EA4335" d="M24 48c6.48 0 11.91-2.15 15.88-5.88l-7.37-5.71c-2.12 1.42-4.81 2.26-8.51 2.26-5.68 0-10.56-3.73-12.32-8.88l-7.91 6.19C6.84 42.53 14.62 48 24 48z"/>
+              </svg><i>Sign In With Google</i>
+              </button>
+
+              <button  class="btn btn-outline ficebook ms-2"><i class="bi bi-facebook" ></i>
+              </button>
+            <button  class="btn btn-outline apple ms-2"><i class="bi bi-apple" ></i>
+            </button>
+
+
+
+          </form>
+          <div class="signin">
+            <span>Don't have an account? <a routerLink="/signup">Sign up here</a></span>
+          </div>
+          <div class="forgot-password">
+            <a routerLink="/forgot-password">Forgot Password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
