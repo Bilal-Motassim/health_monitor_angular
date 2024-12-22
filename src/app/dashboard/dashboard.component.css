@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.calorie-chart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.chart-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.chart-label p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.chart-label span {
+  font-size: 1rem;
+  color: gray;
+}
+
+.weight-info table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #e5e5e5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: 2px solid #000703;
+  overflow: hidden;
+}
+
+.weight-info th,
+.weight-info td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.weight-info tr {
+  background-color: #e5e5e5;
+}
+
+.goal-quote {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.goal ul {
+  list-style: none;
+  padding: 0;
+}
+
+.goal li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.goal .maintaining {
+  width: 20px;
+  height: 20px;
+  background-color: #f1c40f;
+  border-radius: 50%;
+}
+
+.goal .lose-weight {
+  width: 20px;
+  height: 20px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+}
+
+.goal .gain-weight {
+  width: 20px;
+  height: 20px;
+  background-color: #27ae60;
+  border-radius: 50%;
+}
+
+.quote blockquote {
+  background-color: #e5e5e5;
+  border-radius: 20px;
+  padding: 20px;
+  border-left: 5px solid #27ae60;
+  font-style: italic;
+}
+
+.styled-table th, .styled-table td {
+  background-color: #e5e5e5;
+
+}
+
+
+.weight-info th,
+.weight-info td {
+  border: 2px solid #000000; /* Bordure des cellules en jaune */
+}
+

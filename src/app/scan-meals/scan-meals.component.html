@@ -1,0 +1,74 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="dashboard col-md-8">
+    <!-- Section contenant les deux colonnes -->
+      <div class="row">
+        <!-- Première colonne -->
+        <div class="col-md-4">
+        <!-- Ingredients Section -->
+      <div class="">
+        <strong> <h2>Ingredients</h2></strong>
+        <br>
+        <ul class="list-unstyled "
+        style="
+        background-color: #e5e5e5;
+        border-radius: 10px;
+        padding: 20px;
+        ">
+          <li>Olive oil</li>
+          <li>Garlic</li>
+          <li>Flour</li>
+          <li>Tomatoes</li>
+          <li>Chicken breast</li>
+        </ul>
+      </div>
+
+        <!-- Macronutrition Section -->
+        <div class="">
+          <h2>Macronutrition</h2>
+          <br>
+          <ul  class="list-unstyled " style="
+          background-color: #e5e5e5;
+          border-radius: 10px;
+          padding: 20px;
+          ">
+            <li>Carbs</li>
+            <li>Fats</li>
+            <li>Protein</li>
+            <li>Fibres</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Deuxième colonne -->
+      <div class="col-md-6 imgdiv">
+        <div class="image-container" >
+          <input type="file" (change)="onImageSelected($event)" accept="image/*">
+          <div class="meal-image">
+            <img *ngIf="imageUrl" [src]="imageUrl" alt="Selected Meal Image">
+          </div>
+          <button class="scan-button" (click)="scanMeal()">Scan your meal</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <!-- Colonne pour Citation -->
+      <div class="col-md-12">
+        <div class="">
+          <h2>Feedback</h2>
+          <br>
+          <p  style="
+          background-color: #e5e5e5;
+          border-radius: 10px;
+          padding: 20px;
+          ">
+            This meal, with olive oil, garlic, and chicken breast, offers a healthy balance of lean protein and heart-healthy fats. The addition of tomatoes provides antioxidants, while the use of garlic boosts immunity and supports digestion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

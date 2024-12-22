@@ -10,6 +10,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AppHttpInterceptor} from './interceptors/app-http.interceptor';
 import { DetailsComponent } from './details/details.component';
+import { ProfileComponent } from './profile/profile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ScanMealsComponent } from './scan-meals/scan-meals.component';
+import { RepportComponent } from './repport/repport.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { DetailsComponent } from './details/details.component';
     SigninComponent,
     SignupComponent,
     LoginComponent,
-    DetailsComponent
+    DetailsComponent,
+    ProfileComponent,
+    DashboardComponent,
+    ScanMealsComponent,
+    RepportComponent
   ],
   imports: [
     BrowserModule,
