@@ -1,0 +1,126 @@
+<div class="wrapper">
+  <div class="container main">
+    <div class="row">
+      <div class="col-md-6 side-image">
+        <img src="{{path}}" alt="{{alttext}}">
+        <div class="text">
+          <p></p>
+        </div>
+      </div>
+
+      <div class="col-md-6 right">
+        <div class="input-box" style="width: 80%;">
+          <label class="lbl">Welcome to <strong>FITNAT</strong></label>
+          <header class="headerr">Details</header>
+          <form [formGroup]="userForm" (ngSubmit)="onSubmit()" style="margin-top: -55px;">
+            <div class="input-field">
+              <input
+                formControlName="height"
+                type="number"
+                class="input"
+                id="height"
+                required
+                autocomplete="off">
+              <label for="height">Height</label>
+              <div *ngIf="f['height']?.invalid && (f['height']?.touched || f['height']?.dirty)">
+                <small class="text-danger" *ngIf="f['height']?.errors?.['required']">
+                  La taille est obligatoire.
+                </small>
+                <small class="text-danger" *ngIf="f['height']?.errors?.['min']">
+                  La taille doit être supérieure à 0.
+                </small>
+              </div>
+            </div>
+
+            <div class="input-field">
+              <input
+                type="date"
+                formControlName="date"
+                class="input"
+                id="date"
+                required>
+              <label for="date">Date of Birth</label>
+              <div *ngIf="f['date']?.invalid && (f['date']?.touched || f['date']?.dirty)">
+                <small class="text-danger" *ngIf="f['date']?.errors?.['required']">
+                  La date de naissance est obligatoire.
+                </small>
+              </div>
+            </div>
+
+            <div class="input-field">
+              <input
+                formControlName="age"
+                type="number"
+                class="input"
+                id="age"
+                required>
+              <label for="age">Age</label>
+              <div *ngIf="f['age']?.invalid && (f['age']?.touched || f['age']?.dirty)">
+                <small class="text-danger" *ngIf="f['age']?.errors?.['required']">
+                  L'âge est obligatoire.
+                </small>
+              </div>
+            </div>
+
+            <div class="input-field">
+              <input
+                formControlName="weight"
+                type="number"
+                class="input"
+                id="weight"
+                required>
+              <label for="weight">Weight</label>
+              <div *ngIf="f['weight']?.invalid && (f['weight']?.touched || f['weight']?.dirty)">
+                <small class="text-danger" *ngIf="f['weight']?.errors?.['required']">
+                  Le poids est obligatoire.
+                </small>
+              </div>
+            </div>
+
+            <div class="input-field">
+              <select
+                formControlName="gender"
+                class="input select-input"
+                id="gender"
+                required>
+                <option value="" disabled selected hidden>Select your gender</option>
+                <option value="MALE">Male</option>
+                <option value="FEMALE">Female</option>
+              </select>
+              <!-- <label for="gender">Gender</label> -->
+              <div *ngIf="f['gender']?.invalid && (f['gender']?.touched || f['gender']?.dirty)">
+                <small class="text-danger" *ngIf="f['gender']?.errors?.['required']">
+                  Le genre est obligatoire.
+                </small>
+              </div>
+            </div>
+
+            <div class="input-field">
+              <select
+                formControlName="gool"
+                class="input select-input"
+                id="gool"
+                required>
+                <option value="" disabled selected hidden>Select your gool</option>
+                <option value="GAIN">GAIN</option>
+                <option value="MAINTAIN">MAINTAIN</option>
+                <option value="LOSS">LOSS</option>
+              </select>
+              <!-- <label for="gool">Gool</label> -->
+              <div *ngIf="f['gool']?.invalid && (f['gool']?.touched || f['gool']?.dirty)">
+                <small class="text-danger" *ngIf="f['gool']?.errors?.['required']">
+                  Le genre est obligatoire.
+                </small>
+              </div>
+            </div>
+
+            <div class="input-field">
+              <button type="submit" class="btn btn-success" [disabled]="userForm.invalid">Submit</button>
+            </div>
+            <br>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

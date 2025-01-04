@@ -1,0 +1,33 @@
+<div class="container">
+  <!-- Only show this section when the user is signed in -->
+
+    <div class="sidebar">
+      <ul class="menu">
+        <li class="menu-item" routerLink="/dashboard" routerLinkActive="active">
+          <i class="icon">📊</i> Dashboard
+        </li>
+        <li class="menu-item" routerLink="/scanMeals" routerLinkActive="active">
+          <i class="icon">🍽️</i> Scan meals
+        </li>
+        <li class="menu-item" routerLink="/repport" routerLinkActive="active">
+          <i class="icon">📋</i> Report
+        </li>
+     
+        <li class="menu-item" routerLink="/profile" routerLinkActive="active">
+          <i class="icon">👤</i> Profile
+        </li>
+      </ul>
+      <div class="logout">
+        <button class="logout-button" >
+          <i class="icon">↩️</i> Logout
+        </button>
+      </div>
+    </div>
+
+    <!-- Content Area for pages -->
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
